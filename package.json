@@ -1,0 +1,19 @@
+{
+  "name": "data-marked",
+  "version": "1.0.0",
+  "description": "Markdown in plain JS using marked",
+  "main": "data-marked.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://andrewmcwatters@github.com/andrewmcwatters/data-marked.git"
+  },
+  "author": "Andrew McWatters",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andrewmcwatters/data-marked/issues"
+  },
+  "homepage": "https://github.com/andrewmcwatters/data-marked#readme"
+}
