@@ -1,5 +1,5 @@
 # data-marked
-Markdown in plain JS using marked
+Markdown in plain HTML using marked
 
 ## Install
 
