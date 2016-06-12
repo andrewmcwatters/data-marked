@@ -7,6 +7,7 @@
 
   function onincludecontentloaded(event) {
     set(event.target);
+    console.log(event);
   }
 
   function marked(el) {
