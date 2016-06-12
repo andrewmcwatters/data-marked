@@ -5,14 +5,8 @@
     el.innerHTML = window.marked(el.dataset.marked || el.innerHTML);
   }
 
-  function onincludecontentloaded(event) {
-    set(event.target);
-    console.log(event);
-  }
-
   function marked(el) {
     set(el);
-    el.addEventListener('includecontentloaded', onincludecontentloaded);
   }
 
   function markedAll() {
@@ -51,4 +45,8 @@
   });
 
   observer.observe(document.body, { childList: true, subtree: true });
+
+  document.body.addEventListener('includecontentloaded', function(event) {
+    set(event.target);
+  });
 })();
