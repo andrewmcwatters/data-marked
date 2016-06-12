@@ -1,8 +1,17 @@
 (function() {
   'use strict';
 
-  function marked(el) {
+  function set(el) {
     el.innerHTML = window.marked(el.dataset.marked || el.innerHTML);
+  }
+
+  function onincludecontentloaded(event) {
+    set(event.target);
+  }
+
+  function marked(el) {
+    set(el);
+    el.addEventListener('includecontentloaded', onincludecontentloaded);
   }
 
   function markedAll() {
