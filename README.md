@@ -13,7 +13,7 @@ npm install andrewmcwatters/data-marked
 
 ```html
 <ANY
-  data-marked>
+  data-marked="markdown">
 </ANY>
 ```
 
