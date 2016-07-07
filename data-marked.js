@@ -1,12 +1,8 @@
 (function() {
   'use strict';
 
-  function set(el) {
-    el.innerHTML = window.marked(el.dataset.marked || el.innerHTML);
-  }
-
   function marked(el) {
-    set(el);
+    el.innerHTML = window.marked(el.dataset.marked || el.innerHTML);
   }
 
   function markedAll() {
@@ -45,8 +41,4 @@
   });
 
   observer.observe(document.body, { childList: true, subtree: true });
-
-  document.body.addEventListener('includecontentloaded', function(event) {
-    set(event.target);
-  });
 })();
