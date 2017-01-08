@@ -2,15 +2,12 @@
 Markdown in plain HTML using marked
 
 ## Install
-
 ### npm
-
 ```shell
 npm install andrewmcwatters/data-marked
 ```
 
 ## Usage
-
 ```html
 <ANY
   data-marked="markdown">
@@ -18,13 +15,11 @@ npm install andrewmcwatters/data-marked
 ```
 
 ### Arguments
-
 | Param       | Type     | Details  |
 | ----------- | -------- | -------- |
 | data-marked | `string` | Markdown |
 
 ## License
-
 The MIT License
 
 Copyright (c) 2017 Andrew McWatters. http://andrewmcwatters.com
