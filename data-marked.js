@@ -5,10 +5,23 @@
     el.innerHTML = window.marked(el.dataset.marked || el.innerHTML);
   }
 
-  function markedAll() {
-    var elements = document.querySelectorAll('[data-marked]');
+  function init(node = document) {
+    if (node.target) {
+      node = node.target;
+    }
+
+    if (!node.querySelectorAll) {
+      return;
+    }
+
+    if (node.dataset && node.dataset.marked) {
+      marked(node);
+    }
+
+    var elements = node.querySelectorAll('[data-marked]');
     for (var i = 0; i < elements.length; i++) {
-      marked(elements[i]);
+      var element = elements[i];
+      marked(element);
     }
   }
 
@@ -20,23 +33,11 @@
     }
   }
 
-  ready(markedAll);
-
-  function update(node) {
-    if (node.dataset && node.dataset.marked) {
-      marked(node);
-      return;
-    }
-
-    var childNodes = node.childNodes;
-    for (var i = 0; i < childNodes.length; i++) {
-      update(childNodes[i]);
-    }
-  }
+  ready(init);
 
   var observer = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
-      Array.prototype.forEach.call(mutation.addedNodes, update);
+      Array.prototype.forEach.call(mutation.addedNodes, init);
     });
   });
 
