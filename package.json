@@ -1,6 +1,6 @@
 {
   "name": "data-marked",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Markdown in plain HTML using marked",
   "main": "data-marked.js",
   "scripts": {
