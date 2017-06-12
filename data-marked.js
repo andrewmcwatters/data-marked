@@ -16,6 +16,7 @@
 
     if (node.dataset && node.dataset.marked) {
       marked(node);
+      return;
     }
 
     var elements = node.querySelectorAll('[data-marked]');
