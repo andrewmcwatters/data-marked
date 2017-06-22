@@ -10,7 +10,7 @@
       node = node.target;
     }
 
-    if (!node.querySelectorAll) {
+    if (node.nodeType === Node.TEXT_NODE) {
       return;
     }
 
