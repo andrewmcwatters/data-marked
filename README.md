@@ -2,9 +2,9 @@
 Markdown in plain HTML using marked
 
 ## Install
-### npm
+### yarn
 ```shell
-npm install andrewmcwatters/data-marked
+yarn add andrewmcwatters/data-marked
 ```
 
 ## Usage
