@@ -4,7 +4,7 @@ Markdown in plain HTML using marked
 ## Install
 ### yarn
 ```shell
-yarn add andrewmcwatters/data-marked
+yarn add andrewmcwatters/data-marked#v1.2.6
 ```
 
 ## Usage
